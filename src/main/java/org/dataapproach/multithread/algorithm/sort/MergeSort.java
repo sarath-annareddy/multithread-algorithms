@@ -3,7 +3,14 @@ package org.dataapproach.multithread.algorithm.sort;
 import java.util.*;
 
 /**
- * The Big-O complexity is log2(n).
+ * MergeSort is a divide-and-conquer algorithm.
+ * 
+ * The average and worst of Big-O time complexity of MergeSort is Nlog2(N).
+ * 
+ * This uses a additional memory of size N.
+ * 
+ * It is better to switch to insertion sort from merge sort,
+ *  if number of elements is less than 7
  * 
  * @author sarath
  *
@@ -68,7 +75,7 @@ public class MergeSort {
 			mergeSort(a);
 			return;
 		}
-
+		
 		int mid = a.length / 2;
 
 		int[] left = Arrays.copyOfRange(a, 0, mid);
@@ -119,6 +126,7 @@ public class MergeSort {
 		merge(left, right, a);
 	}
 
+	// Logic to merge two sorted arrays
 	private static void merge(int[] a, int[] b, int[] r) {
 		int i = 0, j = 0, k = 0;
 		while (i < a.length && j < b.length) {
