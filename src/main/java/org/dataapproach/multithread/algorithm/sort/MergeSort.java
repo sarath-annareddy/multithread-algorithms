@@ -10,7 +10,7 @@ import java.util.*;
  * This uses a additional memory of size N.
  * 
  * It is better to switch to insertion sort from merge sort,
- *  if number of elements is less than 7
+ *  if number of elements is less than 7 0r 8
  * 
  * @author sarath
  *
